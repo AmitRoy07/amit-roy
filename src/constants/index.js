@@ -282,13 +282,7 @@ export const certifications = [
 ];
 
 export const awards = [
-  {
-    id: 1,
-    title: "Student Of the Batch",
-    issuer: "Ejobindia",
-    year: "2019",
-    icon: "lucide:graduation-cap",
-  },
+  
   {
     id: 2,
     title: "Precious Gem Award",
@@ -302,6 +296,13 @@ export const awards = [
     issuer: "SentientGeeks",
     year: "2023",
     icon: "lucide:trophy",
+  },
+  {
+    id: 1,
+    title: "Student Of the Batch",
+    issuer: "Ejobindia",
+    year: "2019",
+    icon: "lucide:graduation-cap",
   },
 ];
 
