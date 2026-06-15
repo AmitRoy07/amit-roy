@@ -6,14 +6,14 @@ import gsap from "gsap";
 import { Icon } from "@iconify/react";
 
 const aboutHighlights = [
-  { label: "5.5 years", icon: "lucide:badge-check" },
+  { label: "5.7+ years", icon: "lucide:badge-check" },
   { label: "Team lead", icon: "lucide:users-round" },
   { label: "Motion UI", icon: "lucide:sparkles" },
   { label: "Scalable frontend", icon: "lucide:blocks" },
 ];
 
 const About = () => {
-  const text = `5.5 years of building modern web applications
+  const text = `5.7+ years of building modern web applications
     across UI/UX design, frontend architecture,
     responsive systems, animation, and client delivery`;
   const aboutText = `I am a UI/UX Designer and Frontend Developer based in Kolkata, currently working as a lead at SentientGeeks. I build scalable web interfaces with React, Next.js, Angular, Svelte, JavaScript, TypeScript, Tailwind CSS, SCSS, Bootstrap, PrimeNG, Material UI, and modern design systems.
