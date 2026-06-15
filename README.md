@@ -1,6 +1,6 @@
-# Smriti Dey Portfolio
+# Amit Roy Portfolio
 
-An animated professional portfolio for Smriti Dey, UI/UX Developer and Frontend Engineer. It is built with React, Vite, GSAP, Tailwind CSS, Three.js, React Three Fiber, Drei, Lenis, Iconify, and a Magic UI smooth cursor.
+An animated professional portfolio for Amit Roy, UI/UX Designer and Frontend Developer. It is built with React, Vite, GSAP, Tailwind CSS, Three.js, React Three Fiber, Drei, Lenis, Iconify, and a Magic UI smooth cursor.
 
 This repository is currently a web project, not an Expo project. Expo + React Native + TypeScript rules are documented in [docs/RULES.md](docs/RULES.md) so future mobile or cross-platform work can follow the same engineering standards.
 
@@ -26,7 +26,7 @@ This repository is currently a web project, not an Expo project. Expo + React Na
 
 - Main metadata and structured data: `index.html`
 - Favicon, app icon, manifest, and robots file: `public/`
-- Current social preview image: `/assets/backgrounds/smriti.jpg`
+- Current social preview image: `/assets/images/Intro/profile.webp`
 
 ## Setup
 
@@ -60,4 +60,4 @@ npm run preview
 ## Maintenance Rule
 
 Before changing architecture, folder structure, dependencies, animation strategy, or platform direction, study the current implementation first and update the relevant docs in `docs/` in the same change.
-"# smriti-dey" 
+"# amit-roy" 

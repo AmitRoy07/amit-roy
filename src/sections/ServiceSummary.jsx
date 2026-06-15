@@ -62,12 +62,12 @@ const ServiceSummary = () => {
       >
         <p>
           <SummaryWord icon="lucide:panel-top" className="font-normal">
-            WordPress
+            Next.js
           </SummaryWord>
         </p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>
-          <SummaryWord icon="lucide:shopping-bag">Shopify</SummaryWord>
+          <SummaryWord icon="lucide:component">Angular</SummaryWord>
         </p>
       </div>
       <div
@@ -85,7 +85,7 @@ const ServiceSummary = () => {
         </p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>
-          <SummaryWord icon="lucide:panel-top">CMS</SummaryWord>
+          <SummaryWord icon="lucide:sparkles">Motion</SummaryWord>
         </p>
       </div>
       <div id="title-service-4" className="translate-x-48">

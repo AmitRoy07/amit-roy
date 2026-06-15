@@ -122,6 +122,10 @@ body {
   @apply text-[68px] sm:text-[118px] md:text-[126px] lg:text-[152px] leading-9 sm:leading-16 lg:leading-20;
 }
 
+@utility long-title-responsive {
+  @apply text-[36px] min-[390px]:text-[40px] sm:text-[70px] md:text-[86px] lg:text-[108px] xl:text-[124px] leading-8 min-[390px]:leading-9 sm:leading-12 md:leading-14 lg:leading-16;
+}
+
 @utility value-text-responsive {
   @apply text-2xl md:text-[26px] lg:text-[32px];
 }

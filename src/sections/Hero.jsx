@@ -9,9 +9,9 @@ const Hero = () => {
   const isTablet = useMediaQuery({ minWidth: 854, maxWidth: 1100 });
   const planetScale = isMobile ? 0.58 : isTablet ? 0.64 : 0.74;
   const cameraPosition = isMobile ? [0, 0, -12.2] : [0, 0, -11.5];
-  const text = `I design and build responsive interfaces
-with React, WordPress, Shopify, and modern UI systems
-that feel polished, fast, and business-ready`;
+  const text = `I design and build scalable web interfaces
+with React, Next.js, Angular, Svelte, and motion-rich UI systems
+that feel polished, fast, and production-ready`;
 
   return (
     <section
@@ -20,15 +20,15 @@ that feel polished, fast, and business-ready`;
     >
       <div className="relative z-10">
         <AnimatedHeaderSection
-          subTitle={"UI/UX Developer | Frontend Engineer"}
-          title={"Smriti Dey"}
+          subTitle={"UI/UX Designer | Frontend Developer"}
+          title={"Amit Roy"}
           text={text}
           textColor={"text-black"}
         />
         <div className="px-5 sm:px-10 mt-10">
           <a
-            href="/resume.pdf"
-            download="Smriti-Dey-Resume.pdf"
+            href="/Roy_Amit_Resume_28-05-2026.pdf"
+            download="Amit-Roy-Resume.pdf"
             className="inline-flex items-center justify-center rounded-full border border-gold bg-black px-8 py-4 text-sm font-medium uppercase tracking-[0.35em] text-white transition-colors duration-300 hover:bg-white hover:text-black"
           >
             Download Resume

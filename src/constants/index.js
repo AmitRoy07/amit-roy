@@ -1,96 +1,96 @@
 export const servicesData = [
   {
-    title: "UI/UX Implementation",
+    title: "UI/UX Design & Implementation",
     icon: "lucide:pen-tool",
     description:
-      "I translate Figma, Adobe XD, and PSD designs into responsive, pixel-perfect interfaces with semantic markup, smooth interactions, and strong attention to visual detail.",
+      "I translate product ideas and Figma designs into responsive, production-ready interfaces with strong visual detail, usability, and frontend discipline.",
     items: [
       {
-        title: "Figma to Frontend",
+        title: "Product UI Design",
         icon: "lucide:figma",
         description:
-          "Design-system aligned React, WordPress, Shopify, HTML, and CSS builds",
+          "Wireframes, visual systems, user flows, and client-ready UI direction",
       },
       {
-        title: "PSD-to-HTML",
+        title: "Design to Frontend",
         icon: "lucide:file-code-2",
-        description: "Accurate landing pages and reusable layout systems",
+        description: "Accurate React, Next.js, Angular, and Svelte implementation",
       },
       {
         title: "Responsive Interfaces",
         icon: "lucide:monitor-smartphone",
-        description: "Mobile-first layouts for web, dashboards, and campaigns",
+        description: "Mobile-first layouts for SaaS products, dashboards, and websites",
       },
     ],
   },
   {
-    title: "Frontend & CMS Engineering",
+    title: "Frontend Architecture",
     icon: "lucide:code-2",
     description:
-      "I build modular React and Next.js interfaces, customize WordPress and Shopify experiences, and support basic Angular UI tasks when needed.",
+      "I build scalable frontend applications with reusable components, smooth interactions, and performance-focused implementation across modern frameworks.",
     items: [
       {
         title: "React & Next.js",
         icon: "lucide:atom",
-        description: "Hooks, reusable components, state patterns, and SCSS",
+        description: "Reusable UI, page architecture, hooks, routing, and optimization",
       },
+      {
+        title: "Angular & Svelte",
+        icon: "lucide:component",
+        description:
+          "Dashboard interfaces, reusable components, and responsive product flows",
+      },
+      {
+        title: "TypeScript & JavaScript",
+        icon: "lucide:file-code-2",
+        description: "Clean frontend logic with reliable HTML5, CSS3, and UI patterns",
+      },
+    ],
+  },
+  {
+    title: "Motion & Interaction",
+    icon: "lucide:layers-3",
+    description:
+      "I create polished, modern web experiences using animation frameworks, 3D interaction, smooth scrolling, and careful UI optimization.",
+    items: [
+      {
+        title: "Framer Motion & GSAP",
+        icon: "lucide:sparkles",
+        description:
+          "Page transitions, reveal animations, micro-interactions, and scroll effects",
+      },
+      {
+        title: "Three.js & Lenis",
+        icon: "lucide:orbit",
+        description: "Interactive visuals and smooth, premium-feeling browsing",
+      },
+      {
+        title: "Tailwind & UI Kits",
+        icon: "lucide:component",
+        description: "Tailwind CSS, SCSS/SASS, Bootstrap, PrimeNG, and Material UI",
+      },
+    ],
+  },
+  {
+    title: "CMS & Platform Delivery",
+    icon: "lucide:panel-top",
+    description:
+      "I support CMS-driven and storefront experiences with responsive UI, maintainable structure, and client-friendly delivery.",
+    items: [
       {
         title: "WordPress & Shopify",
         icon: "lucide:shopping-bag",
-        description:
-          "Theme customization, CMS pages, Liquid updates, and reusable sections",
+        description: "Marketing sites, storefront sections, CMS pages, and UI polish",
       },
       {
-        title: "Basic Angular Support",
-        icon: "lucide:badge-help",
-        description: "UI fixes, component updates, and dashboard interface support",
-      },
-    ],
-  },
-  {
-    title: "CMS & Design Systems",
-    icon: "lucide:layers-3",
-    description:
-      "I support WordPress, Shopify Liquid, Tailwind CSS, Bootstrap, and scalable UI systems that help teams ship consistent user experiences faster.",
-    items: [
-      {
-        title: "WordPress Development",
-        icon: "lucide:panel-top",
-        description:
-          "Custom pages, responsive theme work, and content-friendly layouts",
+        title: "Strapi CMS",
+        icon: "lucide:database",
+        description: "Frontend integration for CMS-managed content platforms",
       },
       {
-        title: "Shopify Liquid",
-        icon: "lucide:shopping-bag",
-        description: "Theme edits, product sections, landing pages, and storefront polish",
-      },
-      {
-        title: "UI Frameworks",
-        icon: "lucide:component",
-        description: "Tailwind CSS, SASS/SCSS, Bootstrap 5, and design tokens",
-      },
-    ],
-  },
-  {
-    title: "Email & PDF HTML",
-    icon: "lucide:mail-check",
-    description:
-      "I craft inbox-ready newsletters, email templates, and HTML table-based layouts for email and PDF use cases with cross-client compatibility in mind.",
-    items: [
-      {
-        title: "Newsletter HTML",
-        icon: "lucide:mail",
-        description: "Responsive campaign templates with inline CSS",
-      },
-      {
-        title: "Table-Based Layouts",
-        icon: "lucide:table-2",
-        description: "Reliable email and PDF-friendly HTML structures",
-      },
-      {
-        title: "Cross-Client Support",
+        title: "Cross-Browser UX",
         icon: "lucide:shield-check",
-        description: "Compatibility-focused markup for marketing delivery",
+        description: "Compatibility, accessibility awareness, and production polish",
       },
     ],
   },
@@ -99,99 +99,146 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "ConvexSol",
-    icon: "lucide:building-2",
+    name: "ClassPoint",
+    icon: "lucide:presentation",
     description:
-      "Corporate website development with a secure, high-performance React and Next.js frontend, CDN setup, and analytics integration.",
-    href: "https://convexsol.com/",
+      "ClassPoint 2.0 frontend work focused on responsive React interfaces, reusable UI components, and design-to-production implementation across the web platform and PowerPoint extension.",
+    href: "https://www.classpoint.io",
     image: "/assets/projects/convexsol.webp",
-    bgImage: "/assets/backgrounds/poster.jpg",
+    bgImage: "/assets/projects/convexsol.webp",
     frameworks: [
       { id: 1, name: "React.js" },
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "AWS" },
-      { id: 4, name: "Analytics" },
+      { id: 2, name: "Figma" },
+      { id: 3, name: "Reusable UI" },
+      { id: 4, name: "PowerPoint Extension" },
     ],
   },
   {
     id: 2,
-    name: "OnUFitness",
-    icon: "lucide:activity",
+    name: "GobyHomes",
+    icon: "lucide:home",
     description:
-      "Health and fitness platform with responsive UI, API integration, and a seamless tracking experience for users.",
-    href: "https://onufitness.com/",
+      "Frontend architecture using React and Next.js with modern UI components, smooth transitions, and animation-rich user flows.",
+    href: "https://gobyhomes.com",
     image: "/assets/projects/onufitness.webp",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    bgImage: "/assets/projects/onufitness.webp",
     frameworks: [
-      { id: 1, name: "Basic Angular" },
-      { id: 2, name: "Node.js" },
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Next.js" },
       { id: 3, name: "Tailwind CSS" },
-      { id: 4, name: "REST APIs" },
+      { id: 4, name: "Framer Motion" },
     ],
   },
   {
     id: 3,
-    name: "Neutracom",
-    icon: "lucide:panel-top",
+    name: "QuantumSoar",
+    icon: "lucide:rocket",
     description:
-      "WordPress website work focused on responsive pages, clean content structure, and polished frontend presentation.",
-    href: "https://neutracom.net/",
+      "Reusable Svelte.js frontend implementation with Tailwind CSS, responsive layouts, and maintainable component structures.",
+    href: "https://www.quantumsoar.com",
     image: "/assets/projects/neutracom.webp",
-    bgImage: "/assets/backgrounds/map.jpg",
+    bgImage: "/assets/projects/neutracom.webp",
     frameworks: [
-      { id: 1, name: "WordPress" },
-      { id: 2, name: "Responsive UI" },
-      { id: 3, name: "SEO Markup" },
-      { id: 4, name: "CMS" },
+      { id: 1, name: "Svelte.js" },
+      { id: 2, name: "Tailwind CSS" },
+      { id: 3, name: "Components" },
+      { id: 4, name: "Responsive UI" },
     ],
   },
   {
     id: 4,
-    name: "Sadeem",
-    icon: "lucide:shopping-bag",
+    name: "RainDrop Media Consultancy",
+    icon: "lucide:cloud-rain",
     description:
-      "Shopify storefront work with Liquid customization, responsive product sections, and conversion-friendly UI polish.",
-    href: "https://csrege-sn.myshopify.com/",
+      "Website frontend built with Next.js, Tailwind CSS, and SCSS, including interactive animation work with Three.js.",
+    href: "https://raindropmediaconsultancy.com",
     image: "/assets/projects/sadeem.webp",
-    bgImage: "/assets/backgrounds/table.jpg",
+    bgImage: "/assets/projects/sadeem.webp",
     frameworks: [
-      { id: 1, name: "Shopify" },
-      { id: 2, name: "Liquid" },
-      { id: 3, name: "Storefront UI" },
-      { id: 4, name: "Responsive" },
+      { id: 1, name: "Next.js" },
+      { id: 2, name: "Tailwind CSS" },
+      { id: 3, name: "SCSS" },
+      { id: 4, name: "Three.js" },
     ],
   },
   {
     id: 5,
-    name: "BrandHub",
-    icon: "lucide:shopping-bag",
+    name: "ONUFitness",
+    icon: "lucide:activity",
     description:
-      "CMS and storefront work including responsive pages, theme customization, Shopify Liquid edits, and SEO-friendly markup.",
-    href: "",
+      "Application interface built with Angular, Tailwind CSS, and PrimeNG, covering dashboard screens and post-login user flows.",
+    href: "https://dev.onufitness.com",
     image: "/assets/projects/brandHub.webp",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/projects/brandHub.webp",
     frameworks: [
-      { id: 1, name: "WordPress" },
-      { id: 2, name: "Shopify" },
-      { id: 3, name: "Liquid" },
-      { id: 4, name: "SEO Markup" },
+      { id: 1, name: "Angular" },
+      { id: 2, name: "Tailwind CSS" },
+      { id: 3, name: "PrimeNG" },
+      { id: 4, name: "Dashboard UI" },
     ],
   },
   {
     id: 6,
-    name: "TipOff",
-    icon: "lucide:layout-dashboard",
+    name: "Noir Automotive",
+    icon: "lucide:car-front",
     description:
-      "Dashboard UI support with basic Angular component updates and rendering optimizations using Priority Hints.",
-    href: "",
+      "CMS-driven web platform developed and maintained with Next.js and Strapi CMS, focused on responsive UI and optimized frontend performance.",
+    href: "https://noir-automotive.com/",
     image: "/assets/projects/tipoff.webp",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/projects/tipoff.webp",
     frameworks: [
-      { id: 1, name: "Basic Angular" },
-      { id: 2, name: "TypeScript" },
-      { id: 3, name: "Express" },
-      { id: 4, name: "Dashboard UI" },
+      { id: 1, name: "Next.js" },
+      { id: 2, name: "Strapi CMS" },
+      { id: 3, name: "Responsive UI" },
+      { id: 4, name: "Performance" },
     ],
+  },
+];
+
+export const certifications = [
+  {
+    id: 1,
+    title: "Certificate in Graphics Design & Publishing",
+    icon: "lucide:palette",
+  },
+  {
+    id: 2,
+    title: "Certificate in Basic Multimedia",
+    icon: "lucide:monitor-play",
+  },
+  {
+    id: 3,
+    title: "Certificate in Advanced Multimedia",
+    icon: "lucide:badge-check",
+  },
+  {
+    id: 4,
+    title: "Certificate in Web Design",
+    icon: "lucide:code-xml",
+  },
+];
+
+export const awards = [
+  {
+    id: 1,
+    title: "Student Of the Batch",
+    issuer: "Ejobindia",
+    year: "2019",
+    icon: "lucide:graduation-cap",
+  },
+  {
+    id: 2,
+    title: "Precious Gem Award",
+    issuer: "SentientGeeks",
+    year: "2024",
+    icon: "lucide:gem",
+  },
+  {
+    id: 3,
+    title: "The Super Geeks Award",
+    issuer: "SentientGeeks",
+    year: "2023",
+    icon: "lucide:trophy",
   },
 ];
 
@@ -199,8 +246,13 @@ export const socials = [
   {
     name: "LinkedIn",
     icon: "lucide:linkedin",
-    href: "https://www.linkedin.com/in/smriti-dey-6a17191b0",
+    href: "https://www.linkedin.com/in/Amit-roy",
   },
-  { name: "Email", icon: "lucide:mail", href: "mailto:smritidey998@gmail.com" },
-  { name: "Phone", icon: "lucide:phone", href: "tel:+916289750400" },
+  {
+    name: "GitHub",
+    icon: "lucide:github",
+    href: "https://github.com/AmitRoy07",
+  },
+  { name: "Email", icon: "lucide:mail", href: "mailto:amitroy2383@gmail.com" },
+  { name: "Phone", icon: "lucide:phone", href: "tel:+917003046697" },
 ];

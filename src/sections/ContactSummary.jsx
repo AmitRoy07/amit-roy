@@ -7,8 +7,8 @@ const ContactSummary = () => {
   const containerRef = useRef(null);
   const items = [
     "React",
-    "WordPress",
-    "Shopify",
+    "Next.js",
+    "Angular",
     "Figma",
     "Tailwind CSS",
   ];

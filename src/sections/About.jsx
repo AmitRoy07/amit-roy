@@ -6,21 +6,21 @@ import gsap from "gsap";
 import { Icon } from "@iconify/react";
 
 const aboutHighlights = [
-  { label: "Pixel-perfect UI", icon: "lucide:scan-eye" },
-  { label: "CMS friendly", icon: "lucide:panel-top" },
-  { label: "Responsive builds", icon: "lucide:monitor-smartphone" },
-  { label: "Email HTML", icon: "lucide:mail-check" },
+  { label: "5.5 years", icon: "lucide:badge-check" },
+  { label: "Team lead", icon: "lucide:users-round" },
+  { label: "Motion UI", icon: "lucide:sparkles" },
+  { label: "Scalable frontend", icon: "lucide:blocks" },
 ];
 
 const About = () => {
-  const text = `4+ years of crafting responsive web interfaces
-    across React, WordPress, Shopify, JavaScript, and UI systems
-    from design handoff to polished delivery`;
-  const aboutText = `I am a UI/UX Developer and Frontend Engineer based in Kolkata, currently working at SentientGeeks. I build high-quality responsive interfaces with React, Next.js, WordPress, Shopify, JavaScript, Tailwind CSS, SCSS, Bootstrap, and modern design systems. I can also support basic Angular UI work when a project needs it.
+  const text = `5.5 years of building modern web applications
+    across UI/UX design, frontend architecture,
+    responsive systems, animation, and client delivery`;
+  const aboutText = `I am a UI/UX Designer and Frontend Developer based in Kolkata, currently working as a lead at SentientGeeks. I build scalable web interfaces with React, Next.js, Angular, Svelte, JavaScript, TypeScript, Tailwind CSS, SCSS, Bootstrap, PrimeNG, Material UI, and modern design systems.
 
-My work spans Figma-to-frontend implementation, PSD-to-HTML conversion, reusable component architecture, REST API integration, WordPress and Shopify customization, SEO-friendly markup, accessibility-aware UI, and inbox-ready email/newsletter HTML.
+My work spans Figma-to-frontend implementation, reusable component architecture, responsive UI development, frontend performance optimization, cross-browser compatibility, animation with Framer Motion, GSAP, Three.js and Lenis, CMS platforms including WordPress, Shopify and Strapi, and hands-on client communication.
 
-I enjoy collaborating with designers, backend teams, and stakeholders to turn ideas into clean, cross-browser experiences that are easy to use and reliable in production.`;
+I enjoy collaborating with designers, developers, clients, and small teams to turn product ideas into clean, reliable, production-ready web experiences.`;
   const imgRef = useRef(null);
 
   useGSAP(() => {
@@ -60,8 +60,8 @@ I enjoy collaborating with designers, backend teams, and stakeholders to turn id
       <div className="flex flex-col items-center justify-between gap-16 px-5 pb-16 text-xl font-light tracking-wide sm:px-10 lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="/assets/backgrounds/smriti.jpg"
-          alt="Smriti Dey"
+          src="/assets/images/Intro/profile.webp"
+          alt="Amit Roy"
           className="object-cover w-md h-[600px] rounded-3xl"
         />
         <div className="flex w-full flex-col gap-8">

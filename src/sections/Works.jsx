@@ -10,9 +10,9 @@ const Works = () => {
   const previewRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(null);
-  const text = `Selected frontend projects across dashboards,
-    corporate websites, fitness platforms,
-    and conversion-focused HTML builds.`;
+  const text = `Selected frontend projects across SaaS platforms,
+    animated websites, dashboards, CMS systems,
+    and production-ready product interfaces.`;
 
   const mouse = useRef({ x: 0, y: 0 });
   const moveX = useRef(null);
@@ -106,8 +106,8 @@ const Works = () => {
 
   return (
     <section id="work" className="flex flex-col min-h-screen">
-      <AnimatedHeaderSection
-        subTitle={"Interfaces shipped with care"}
+        <AnimatedHeaderSection
+        subTitle={"Products, platforms, and client delivery"}
         title={"Works"}
         text={text}
         textColor={"text-black"}

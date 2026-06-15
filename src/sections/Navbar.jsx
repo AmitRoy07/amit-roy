@@ -10,6 +10,8 @@ const navLinks = [
   { section: "services", icon: "lucide:wand-sparkles" },
   { section: "about", icon: "lucide:user-round" },
   { section: "work", icon: "lucide:briefcase-business" },
+  { section: "certifications", icon: "lucide:badge-check" },
+  { section: "awards", icon: "lucide:trophy" },
   { section: "contact", icon: "lucide:send" },
 ];
 
@@ -114,16 +116,49 @@ const Navbar = () => {
 
   return (
     <>
+      <Link
+        className="fixed left-5 top-4 z-50 flex h-14 w-28 cursor-pointer items-center justify-center rounded-full border border-black/10 bg-primary px-4 shadow-sm transition-opacity duration-300 sm:left-10 md:h-20 md:w-36"
+        to="home"
+        smooth
+        offset={0}
+        duration={2000}
+        onClick={closeMenu}
+        aria-label="Go to home"
+      >
+        <img
+          src="/assets/images/common/blackLogo.webp"
+          alt="Amit Roy logo"
+          className="max-h-8 w-full object-contain md:max-h-10"
+        />
+      </Link>
       <nav
         ref={navRef}
-        className="fixed z-50 flex h-dvh w-full flex-col justify-between gap-8 overflow-y-auto bg-black px-5 py-20 uppercase text-white/80 sm:px-8 md:left-1/2 md:w-1/2 md:px-10 md:py-[4.5rem] lg:py-16"
+        data-lenis-prevent
+        data-lenis-prevent-wheel
+        data-lenis-prevent-touch
+        className="fixed z-50 flex h-[100dvh] max-h-[100dvh] w-full touch-pan-y flex-col justify-between gap-8 overflow-y-auto overscroll-contain bg-black px-5 py-20 uppercase text-white/80 [-webkit-overflow-scrolling:touch] [scrollbar-gutter:stable] sm:px-8 md:left-1/2 md:w-1/2 md:px-10 md:py-[4.5rem] lg:py-16"
       >
-        <div className="flex flex-col gap-y-2 text-[clamp(3.2rem,10vw,5.8rem)] leading-[0.95] md:text-[clamp(3rem,7vw,5rem)]">
+        <Link
+          className="mb-4 flex w-32 shrink-0 cursor-pointer items-center"
+          to="home"
+          smooth
+          offset={0}
+          duration={2000}
+          onClick={closeMenu}
+          aria-label="Go to home"
+        >
+          <img
+            src="/assets/images/common/whiteLogo.webp"
+            alt="Amit Roy logo"
+            className="max-h-10 w-full object-contain"
+          />
+        </Link>
+        <div className="flex shrink-0 flex-col gap-y-2 text-[clamp(1.75rem,8vw,3.6rem)] leading-[0.98] md:text-[clamp(2rem,5vw,4rem)]">
           {navLinks.map(
             ({ section, icon }, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
                 <Link
-                  className="flex items-center gap-4 transition-all duration-300 cursor-pointer hover:text-white"
+                  className="flex min-w-0 items-center gap-3 transition-all duration-300 cursor-pointer hover:text-white sm:gap-4"
                   to={`${section}`}
                   smooth
                   offset={0}
@@ -131,7 +166,7 @@ const Navbar = () => {
                   onClick={closeMenu}
                 >
                   <Icon icon={icon} className="size-[0.42em] shrink-0 text-gold" />
-                  {section}
+                  <span className="min-w-0 break-words">{section}</span>
                 </Link>
               </div>
             )
@@ -139,12 +174,12 @@ const Navbar = () => {
         </div>
         <div
           ref={contactRef}
-          className="flex flex-col flex-wrap justify-between gap-6 pb-2 md:flex-row"
+          className="flex shrink-0 flex-col flex-wrap justify-between gap-6 pb-2 md:flex-row"
         >
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
             <p className="text-lg tracking-widest lowercase text-pretty md:text-xl">
-              smritidey998@gmail.com
+              amitroy2383@gmail.com
             </p>
           </div>
           <div className="font-light">

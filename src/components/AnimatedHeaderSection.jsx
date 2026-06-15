@@ -18,6 +18,8 @@ const AnimatedHeaderSection = ({
   const headerRef = useRef(null);
   const shouldSplitTitle = title.includes(" ");
   const titleParts = shouldSplitTitle ? title.split(" ") : [title];
+  const titleSizeClass =
+    title.length > 11 ? "long-title-responsive" : "banner-text-responsive";
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: withScrollTrigger
@@ -50,10 +52,10 @@ const AnimatedHeaderSection = ({
           className="flex flex-col justify-center gap-12 pt-16 sm:gap-16"
         >
           <div
-            className={`flex items-center gap-4 px-5 text-sm font-light tracking-[0.5rem] uppercase sm:px-10 ${textColor}`}
+            className={`flex items-center gap-3 px-5 text-xs font-light uppercase tracking-[0.22rem] sm:gap-4 sm:px-10 sm:text-sm sm:tracking-[0.5rem] ${textColor}`}
           >
             <Icon icon={icon} className="size-5 shrink-0 text-gold" />
-            <p>{subTitle}</p>
+            <p className="min-w-0 leading-relaxed">{subTitle}</p>
             <AnimatedSvgMark
               variant="wave"
               className="hidden h-8 w-16 text-gold/80 md:block"
@@ -61,11 +63,12 @@ const AnimatedHeaderSection = ({
           </div>
           <div className="px-5 sm:px-10">
             <h1
-              className={`flex flex-col gap-12 uppercase banner-text-responsive sm:gap-16 md:block 
-               leading-[0.65] md:leading-[0.5] ${textColor}`}
+              className={`flex max-w-full flex-col gap-12 overflow-hidden break-words uppercase ${titleSizeClass} sm:gap-16 md:block ${textColor}`}
             >
               {titleParts.map((part, index) => (
-                <span key={index}>{part} </span>
+                <span key={index} className="inline-block max-w-full">
+                  {part}{" "}
+                </span>
               ))}
             </h1>
           </div>

@@ -6,13 +6,13 @@ import gsap from "gsap";
 import { Icon } from "@iconify/react";
 
 const Contact = () => {
-  const text = `Open to UI/UX developer and frontend roles
+  const text = `Open to UI/UX design and frontend developer roles
     across hybrid, remote, and full-time teams.`;
   const items = [
     "design to frontend",
-    "react and angular",
+    "react and next.js",
     "responsive UI",
-    "email HTML",
+    "motion systems",
     "design to frontend",
   ];
 
@@ -53,10 +53,10 @@ const Contact = () => {
               </h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <a
-                href="mailto:smritidey998@gmail.com"
+                href="mailto:amitroy2383@gmail.com"
                 className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl hover:text-white/80 transition-colors duration-200"
               >
-                smritidey998@gmail.com
+                amitroy2383@gmail.com
               </a>
             </div>
             <div className="social-link">
@@ -66,10 +66,10 @@ const Contact = () => {
               </h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <a
-                href="tel:+916289750400"
+                href="tel:+917003046697"
                 className="text-xl lowercase md:text-2xl lg:text-3xl hover:text-white/80 transition-colors duration-200"
               >
-                +91 6289750400
+                +91 7003046697
               </a>
             </div>
             <div className="social-link">
