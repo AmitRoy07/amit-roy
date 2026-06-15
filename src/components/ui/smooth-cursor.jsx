@@ -4,6 +4,7 @@ import { motion as Motion, useSpring } from "framer-motion"
 const DESKTOP_POINTER_QUERY = "(any-hover: hover) and (any-pointer: fine)"
 
 function isTrackablePointer(pointerType) {
+  // Ignore touch input so phones/tablets keep their native interaction model.
   return pointerType !== "touch"
 }
 
@@ -77,6 +78,7 @@ export function SmoothCursor({
   const [isEnabled, setIsEnabled] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
+  // Spring values make the cursor chase the pointer instead of snapping to it.
   const cursorX = useSpring(0, springConfig)
   const cursorY = useSpring(0, springConfig)
   const rotation = useSpring(0, {
@@ -91,6 +93,7 @@ export function SmoothCursor({
   })
 
   useEffect(() => {
+    // Only enable the custom cursor for devices with precise hover pointers.
     const mediaQuery = window.matchMedia(DESKTOP_POINTER_QUERY)
 
     const updateEnabled = () => {
@@ -118,6 +121,7 @@ export function SmoothCursor({
     let timeout = null
 
     const updateVelocity = (currentPos) => {
+      // Velocity drives the cursor direction and the small movement feedback.
       const currentTime = Date.now()
       const deltaTime = currentTime - lastUpdateTime.current
 
@@ -147,11 +151,13 @@ export function SmoothCursor({
       cursorX.set(currentPos.x)
       cursorY.set(currentPos.y)
 
-      if (speed > 0.1) {
+      if (speed > 0.4) {
+        // Convert movement direction into degrees and rotate the arrow smoothly.
         const currentAngle =
           Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) +
           90
 
+        // Normalize angle jumps so rotation takes the shortest path.
         let angleDiff = currentAngle - previousAngle.current
         if (angleDiff > 180) angleDiff -= 360
         if (angleDiff < -180) angleDiff += 360
@@ -179,6 +185,7 @@ export function SmoothCursor({
 
       if (rafId) return
 
+      // Run pointer work at most once per animation frame.
       rafId = requestAnimationFrame(() => {
         smoothPointerMove(e)
         rafId = 0
@@ -191,6 +198,7 @@ export function SmoothCursor({
     })
 
     return () => {
+      // Restore native behavior and clean pending async work on unmount.
       window.removeEventListener("pointermove", throttledPointerMove)
       document.body.style.cursor = "auto"
       if (rafId) cancelAnimationFrame(rafId)
