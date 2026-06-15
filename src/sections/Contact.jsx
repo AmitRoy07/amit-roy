@@ -93,6 +93,14 @@ const Contact = () => {
                   <a
                     key={social.name}
                     href={social.href}
+                    target={
+                      social.href.startsWith("http") ? "_blank" : undefined
+                    }
+                    rel={
+                      social.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="flex items-center gap-2 text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
                   >
                     <Icon icon={social.icon} className="size-4 text-gold" />

@@ -24,11 +24,13 @@ that feel polished, fast, and production-ready`;
           title={"Amit Roy"}
           text={text}
           textColor={"text-black"}
+          headingLevel="h1"
         />
         <div className="px-5 sm:px-10 mt-2">
           <a
             href="/Roy_Amit_Resume_28-05-2026.pdf"
             download="Amit-Roy-Resume.pdf"
+            type="application/pdf"
             className="inline-flex items-center justify-center rounded-full border border-gold bg-black px-8 py-4 text-sm font-medium uppercase tracking-[0.35em] text-white transition-colors duration-300 hover:bg-white hover:text-black"
           >
             Download Resume

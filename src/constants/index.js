@@ -213,6 +213,51 @@ export const projects = [
   },
 ];
 
+export const clientWebsites = [
+  {
+    id: 1,
+    name: "BignBigger",
+    href: "https://bignbigger.com",
+    category: "Business Website",
+  },
+  {
+    id: 2,
+    name: "Six Star Tiling",
+    href: "https://sixstartiling.com.au",
+    category: "Service Website",
+  },
+  {
+    id: 3,
+    name: "High Street Jewelry",
+    href: "https://highstreetjewelry.com",
+    category: "Ecommerce Website",
+  },
+  {
+    id: 4,
+    name: "Queensland Envelopes",
+    href: "https://www.queenslandenvelopes.com.au",
+    category: "Business Website",
+  },
+  {
+    id: 5,
+    name: "Tap App",
+    href: "https://tapapp.co.uk",
+    category: "Web Platform",
+  },
+  {
+    id: 6,
+    name: "Neutracom",
+    href: "https://neutracom.net",
+    category: "Corporate Website",
+  },
+  {
+    id: 7,
+    name: "Xyra XDR",
+    href: "https://www.xyraxdr.com",
+    category: "Cybersecurity Website",
+  },
+];
+
 export const certifications = [
   {
     id: 1,

@@ -10,6 +10,7 @@ const navLinks = [
   { section: "services", icon: "lucide:wand-sparkles" },
   { section: "about", icon: "lucide:user-round" },
   { section: "work", icon: "lucide:briefcase-business" },
+  { section: "client-websites", icon: "lucide:globe-2" },
   { section: "certifications", icon: "lucide:badge-check" },
   { section: "awards", icon: "lucide:trophy" },
   { section: "contact", icon: "lucide:send" },
@@ -191,6 +192,14 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target={
+                    social.href.startsWith("http") ? "_blank" : undefined
+                  }
+                  rel={
+                    social.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="flex items-center gap-2 text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
                 >
                   <Icon icon={social.icon} className="size-4 text-gold" />

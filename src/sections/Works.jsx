@@ -99,11 +99,6 @@ const Works = () => {
     moveY.current(mouse.current.y);
   };
 
-  const openProject = (href) => {
-    if (!href) return;
-    window.open(href, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="work" className="flex flex-col min-h-screen">
         <AnimatedHeaderSection
@@ -119,13 +114,16 @@ const Works = () => {
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
-          <div
+          <a
             key={project.id}
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
             id="project"
             className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
-            onClick={() => openProject(project.href)}
+            aria-label={`View ${project.name} project`}
           >
             <div
               ref={(el) => {
@@ -136,10 +134,10 @@ const Works = () => {
 
             <div className="flex justify-between px-5 text-black transition-all duration-500 sm:px-10 md:group-hover:px-12 md:group-hover:text-white">
               <div>
-                <h2 className="flex items-center gap-3 lg:text-[32px] text-[26px] leading-none">
+                <h3 className="flex items-center gap-3 lg:text-[32px] text-[26px] leading-none">
                   <Icon icon={project.icon} className="size-7 text-gold" />
                   {project.name}
-                </h2>
+                </h3>
                 <p className="max-w-4xl mt-2 text-sm leading-relaxed normal-case text-black/60 md:group-hover:text-white/70">
                   {project.description}
                 </p>
@@ -170,7 +168,7 @@ const Works = () => {
                 className="absolute bg-center px-14 rounded-xl"
               />
             </div>
-          </div>
+          </a>
         ))}
         <div
           ref={previewRef}
