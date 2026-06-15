@@ -16,7 +16,7 @@ that feel polished, fast, and production-ready`;
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end min-h-screen overflow-hidden"
+      className="relative flex flex-col justify-end min-h-screen"
     >
       <div className="relative z-10">
         <AnimatedHeaderSection
@@ -25,7 +25,7 @@ that feel polished, fast, and production-ready`;
           text={text}
           textColor={"text-black"}
         />
-        <div className="px-5 sm:px-10 mt-10">
+        <div className="px-5 sm:px-10 mt-2">
           <a
             href="/Roy_Amit_Resume_28-05-2026.pdf"
             download="Amit-Roy-Resume.pdf"

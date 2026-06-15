@@ -117,6 +117,7 @@ const Navbar = () => {
   return (
     <>
       <Link
+        href="#home"
         className="fixed left-5 top-4 z-50 flex h-14 w-28 cursor-pointer items-center justify-center rounded-full border border-black/10 bg-primary px-4 shadow-sm transition-opacity duration-300 sm:left-10 md:h-20 md:w-36"
         to="home"
         smooth
@@ -139,6 +140,7 @@ const Navbar = () => {
         className="fixed z-50 flex h-[100dvh] max-h-[100dvh] w-full touch-pan-y flex-col justify-between gap-8 overflow-y-auto overscroll-contain bg-black px-5 py-20 uppercase text-white/80 [-webkit-overflow-scrolling:touch] [scrollbar-gutter:stable] sm:px-8 md:left-1/2 md:w-1/2 md:px-10 md:py-[4.5rem] lg:py-16"
       >
         <Link
+          href="#home"
           className="mb-4 flex w-32 shrink-0 cursor-pointer items-center"
           to="home"
           smooth
@@ -153,7 +155,7 @@ const Navbar = () => {
             className="max-h-10 w-full object-contain"
           />
         </Link>
-        <div className="flex shrink-0 flex-col gap-y-2 text-[clamp(1.75rem,8vw,3.6rem)] leading-[0.98] md:text-[clamp(2rem,5vw,4rem)]">
+        <div className="flex shrink-0 flex-col gap-y-2 text-[clamp(1.75rem,8vw,3rem)] leading-[0.98] md:text-[clamp(1.75rem,5vw,3rem)]">
           {navLinks.map(
             ({ section, icon }, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
@@ -202,7 +204,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-5 sm:right-10"
+        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-5 sm:right-10 border-2 border-[#e5e5e0]/20"
         onClick={toggleMenu}
         role="button"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}

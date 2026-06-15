@@ -63,10 +63,13 @@ const AnimatedHeaderSection = ({
           </div>
           <div className="px-5 sm:px-10">
             <h1
-              className={`flex max-w-full flex-col gap-12 overflow-hidden break-words uppercase ${titleSizeClass} sm:gap-16 md:block ${textColor}`}
+              className={`flex max-w-full flex-col gap-12 break-words uppercase ${titleSizeClass} sm:gap-16 md:block ${textColor}`}
             >
               {titleParts.map((part, index) => (
-                <span key={index} className="inline-block max-w-full">
+                <span
+                  key={index}
+                  className="inline-block max-w-full break-words [overflow-wrap:anywhere]"
+                >
                   {part}{" "}
                 </span>
               ))}
@@ -76,7 +79,7 @@ const AnimatedHeaderSection = ({
       </div>
       <div className={`relative px-5 sm:px-10 ${textColor}`}>
         <div className="absolute inset-x-0 border-t-2" />
-        <div className="py-12 sm:py-16 text-end">
+        <div className="py-12 text-end">
           <AnimatedTextLines
             text={text}
             className={`font-light uppercase value-text-responsive ${textColor}`}

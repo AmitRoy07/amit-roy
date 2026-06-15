@@ -104,8 +104,8 @@ export const projects = [
     description:
       "ClassPoint 2.0 frontend work focused on responsive React interfaces, reusable UI components, and design-to-production implementation across the web platform and PowerPoint extension.",
     href: "https://www.classpoint.io",
-    image: "/assets/projects/convexsol.webp",
-    bgImage: "/assets/projects/convexsol.webp",
+    image: "/assets/projects/classpoint.png",
+    bgImage: "/assets/projects/classpoint.png",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Figma" },
@@ -120,8 +120,8 @@ export const projects = [
     description:
       "Frontend architecture using React and Next.js with modern UI components, smooth transitions, and animation-rich user flows.",
     href: "https://gobyhomes.com",
-    image: "/assets/projects/onufitness.webp",
-    bgImage: "/assets/projects/onufitness.webp",
+    image: "/assets/projects/gobyHomes.png",
+    bgImage: "/assets/projects/gobyHomes.png",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Next.js" },
@@ -136,8 +136,8 @@ export const projects = [
     description:
       "Reusable Svelte.js frontend implementation with Tailwind CSS, responsive layouts, and maintainable component structures.",
     href: "https://www.quantumsoar.com",
-    image: "/assets/projects/neutracom.webp",
-    bgImage: "/assets/projects/neutracom.webp",
+    image: "/assets/projects/quantumsoar.png",
+    bgImage: "/assets/projects/quantumsoar.png",
     frameworks: [
       { id: 1, name: "Svelte.js" },
       { id: 2, name: "Tailwind CSS" },
@@ -152,8 +152,8 @@ export const projects = [
     description:
       "Website frontend built with Next.js, Tailwind CSS, and SCSS, including interactive animation work with Three.js.",
     href: "https://raindropmediaconsultancy.com",
-    image: "/assets/projects/sadeem.webp",
-    bgImage: "/assets/projects/sadeem.webp",
+    image: "/assets/projects/raindrop.png",
+    bgImage: "/assets/projects/raindrop.png",
     frameworks: [
       { id: 1, name: "Next.js" },
       { id: 2, name: "Tailwind CSS" },
@@ -168,8 +168,8 @@ export const projects = [
     description:
       "Application interface built with Angular, Tailwind CSS, and PrimeNG, covering dashboard screens and post-login user flows.",
     href: "https://dev.onufitness.com",
-    image: "/assets/projects/brandHub.webp",
-    bgImage: "/assets/projects/brandHub.webp",
+    image: "/assets/projects/onufitness.webp",
+    bgImage: "/assets/projects/onufitness.webp",
     frameworks: [
       { id: 1, name: "Angular" },
       { id: 2, name: "Tailwind CSS" },
@@ -184,13 +184,31 @@ export const projects = [
     description:
       "CMS-driven web platform developed and maintained with Next.js and Strapi CMS, focused on responsive UI and optimized frontend performance.",
     href: "https://noir-automotive.com/",
-    image: "/assets/projects/tipoff.webp",
-    bgImage: "/assets/projects/tipoff.webp",
+    image: "/assets/projects/noir.png",
+    bgImage: "/assets/projects/noir.png",
     frameworks: [
       { id: 1, name: "Next.js" },
       { id: 2, name: "Strapi CMS" },
       { id: 3, name: "Responsive UI" },
       { id: 4, name: "Performance" },
+    ],
+  },
+  {
+    id: 7,
+    name: "Air Country Home",
+    icon: "lucide:house-plus",
+    description:
+      "Short-term rental management website for property owners, with responsive pages, owner-focused service content, case studies, and conversion-led enquiry flows.",
+    href: "https://air-country.convexsol.co/",
+    image: "/assets/projects/airCountry.png",
+    bgImage: "/assets/projects/airCountry.png",
+    frameworks: [
+      { id: 0, name: "Next.js" },
+      { id: 21, name: "Strapi CMS" },
+      { id: 1, name: "Frontend UI" },
+      { id: 2, name: "Responsive Design" },
+      { id: 3, name: "Landing Pages" },
+      { id: 4, name: "Conversion Flow" },
     ],
   },
 ];
@@ -246,7 +264,7 @@ export const socials = [
   {
     name: "LinkedIn",
     icon: "lucide:linkedin",
-    href: "https://www.linkedin.com/in/Amit-roy",
+    href: "https://www.linkedin.com/in/amit-roy-92585a1a9?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     name: "GitHub",
