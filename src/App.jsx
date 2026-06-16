@@ -65,19 +65,27 @@ const App = () => {
 
   useGSAP(
     () => {
-      if (!greetingRef.current || !languageRef.current) return;
+      const greetingEl = greetingRef.current;
+      const languageEl = languageRef.current;
+
+      if (isReady || !greetingEl || !languageEl) return;
 
       const tl = gsap.timeline({ repeat: -1 });
 
       greetings.forEach((greeting) => {
         tl.call(() => {
-          greetingRef.current.textContent = greeting.word;
-          languageRef.current.textContent = greeting.language;
-          greetingRef.current.lang = greeting.lang;
-          greetingRef.current.dataset.lang = greeting.lang;
+          if (!greetingEl.isConnected || !languageEl.isConnected) {
+            tl.kill();
+            return;
+          }
+
+          greetingEl.textContent = greeting.word;
+          languageEl.textContent = greeting.language;
+          greetingEl.lang = greeting.lang;
+          greetingEl.dataset.lang = greeting.lang;
         })
           .fromTo(
-            [greetingRef.current, languageRef.current],
+            [greetingEl, languageEl],
             { yPercent: 110, opacity: 0 },
             {
               yPercent: 0,
@@ -87,7 +95,7 @@ const App = () => {
               ease: "power3.out",
             }
           )
-          .to([greetingRef.current, languageRef.current], {
+          .to([greetingEl, languageEl], {
             yPercent: -110,
             opacity: 0,
             duration: 0.22,
@@ -99,7 +107,7 @@ const App = () => {
 
       return () => tl.kill();
     },
-    { scope: loaderRef }
+    { dependencies: [isReady], revertOnUpdate: true, scope: loaderRef }
   );
 
   return (

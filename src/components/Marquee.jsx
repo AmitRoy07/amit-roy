@@ -14,7 +14,6 @@ const Marquee = ({
   scrollReactive = true,
 }) => {
   const containerRef = useRef(null);
-  const trackRef = useRef(null);
   const itemsRef = useRef([]);
   const loopRef = useRef(null);
   const observerRef = useRef(null);
@@ -26,7 +25,9 @@ const Marquee = ({
   }, [items]);
 
   function horizontalLoop(elements, config = {}) {
-    elements = gsap.utils.toArray(elements);
+    elements = gsap.utils
+      .toArray(elements)
+      .filter((element) => element instanceof Element && element.isConnected);
 
     if (!elements.length) return null;
 
@@ -56,6 +57,8 @@ const Marquee = ({
           gsap.getProperty(el, "width", "px")
         ));
 
+        if (!width) return 0;
+
         xPercents[i] = snap(
           (parseFloat(gsap.getProperty(el, "x", "px")) / width) * 100 +
             gsap.getProperty(el, "xPercent")
@@ -75,18 +78,34 @@ const Marquee = ({
         gsap.getProperty(elements[length - 1], "scaleX") +
       (parseFloat(config.paddingRight) || 0);
 
+    if (!Number.isFinite(totalWidth) || totalWidth <= 0) {
+      tl.kill();
+      return null;
+    }
+
     for (let i = 0; i < length; i++) {
       const item = elements[i];
       const curX = (xPercents[i] / 100) * widths[i];
       const distanceToStart = item.offsetLeft + curX - startX;
       const distanceToLoop =
         distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+      const loopOutDuration = distanceToLoop / pixelsPerSecond;
+      const loopInDuration =
+        (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond;
+
+      if (
+        !widths[i] ||
+        !Number.isFinite(loopOutDuration) ||
+        !Number.isFinite(loopInDuration)
+      ) {
+        continue;
+      }
 
       tl.to(
         item,
         {
           xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-          duration: distanceToLoop / pixelsPerSecond,
+          duration: loopOutDuration,
         },
         0
       ).fromTo(
@@ -98,11 +117,10 @@ const Marquee = ({
         },
         {
           xPercent: xPercents[i],
-          duration:
-            (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+          duration: loopInDuration,
           immediateRender: false,
         },
-        distanceToLoop / pixelsPerSecond
+        loopOutDuration
       );
 
       times[i] = distanceToStart / pixelsPerSecond;
@@ -147,6 +165,14 @@ const Marquee = ({
     const container = containerRef.current;
 
     if (!container || !itemsRef.current.length) return;
+    itemsRef.current = itemsRef.current.slice(0, repeatedItems.length);
+    let disposed = false;
+
+    const getValidItems = () =>
+      itemsRef.current.filter(
+        (item) =>
+          item instanceof Element && item.isConnected && container.contains(item)
+      );
 
     const cleanup = () => {
       observerRef.current?.kill?.();
@@ -155,7 +181,7 @@ const Marquee = ({
       observerRef.current = null;
       loopRef.current = null;
 
-      const validItems = itemsRef.current.filter(Boolean);
+      const validItems = getValidItems();
       if (validItems.length) {
         gsap.killTweensOf(validItems);
         gsap.set(validItems, { clearProps: "x,xPercent" });
@@ -163,9 +189,10 @@ const Marquee = ({
     };
 
     const init = () => {
+      if (disposed) return;
       cleanup();
 
-      const validItems = itemsRef.current.filter(Boolean);
+      const validItems = getValidItems();
 
       if (!validItems.length) return;
 
@@ -221,6 +248,7 @@ const Marquee = ({
     resizeObserverRef.current.observe(container);
 
     return () => {
+      disposed = true;
       cancelAnimationFrame(timer);
       resizeObserverRef.current?.disconnect();
       cleanup();
@@ -233,7 +261,6 @@ const Marquee = ({
       className={`relative overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase ${className}`}
     >
       <div
-        ref={trackRef}
         className="flex w-max min-w-max items-center whitespace-nowrap will-change-transform"
       >
         {repeatedItems.map((text, index) => (
