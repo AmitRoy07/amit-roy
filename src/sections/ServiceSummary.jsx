@@ -75,12 +75,12 @@ const ServiceSummary = () => {
         className="flex items-center justify-center gap-3 -translate-x-48"
       >
         <p>
-          <SummaryWord icon="lucide:figma">Wordpress</SummaryWord>
+          <SummaryWord icon="simple-icons:wordpress">Wordpress</SummaryWord>
         </p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p>
           <SummaryWord icon="lucide:pen-tool" className="italic">
-            UI/UX - Figma
+            UI/UX
           </SummaryWord>
         </p>
         <div className="w-10 h-1 md:w-32 bg-gold" />

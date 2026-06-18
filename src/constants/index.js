@@ -96,6 +96,58 @@ export const servicesData = [
   },
 ];
 
+export const techStackCategories = [
+  {
+    title: "Frontend",
+    description: "Production UI development across modern app frameworks.",
+    items: [
+      { name: "React", icon: "simple-icons:react" },
+      { name: "Next.js", icon: "simple-icons:nextdotjs" },
+      { name: "Angular", icon: "simple-icons:angular" },
+      { name: "Svelte", icon: "simple-icons:svelte" },
+      { name: "JavaScript", icon: "simple-icons:javascript" },
+      { name: "TypeScript", icon: "simple-icons:typescript" },
+    ],
+  },
+  {
+    title: "Styling & UI",
+    description: "Responsive interfaces, design systems, and component polish.",
+    items: [
+      { name: "HTML5", icon: "simple-icons:html5" },
+      { name: "CSS3", icon: "simple-icons:css3" },
+      { name: "Tailwind CSS", icon: "simple-icons:tailwindcss" },
+      { name: "SCSS/SASS", icon: "simple-icons:sass" },
+      { name: "Bootstrap", icon: "simple-icons:bootstrap" },
+      { name: "Material UI", icon: "simple-icons:mui" },
+      { name: "PrimeNG", icon: "lucide:component" },
+    ],
+  },
+  {
+    title: "Design & Motion",
+    description: "Figma-to-frontend workflows with animation-rich delivery.",
+    items: [
+      { name: "Figma", icon: "simple-icons:figma" },
+      { name: "Adobe XD", icon: "simple-icons:adobexd" },
+      { name: "Photoshop", icon: "simple-icons:adobephotoshop" },
+      { name: "Framer Motion", icon: "simple-icons:framer" },
+      { name: "GSAP", icon: "simple-icons:greensock" },
+      { name: "Three.js", icon: "simple-icons:threedotjs" },
+    ],
+  },
+  {
+    title: "CMS & Workflow",
+    description: "CMS-driven sites, storefronts, and team delivery tooling.",
+    items: [
+      { name: "WordPress", icon: "simple-icons:wordpress" },
+      { name: "Shopify", icon: "simple-icons:shopify" },
+      { name: "Strapi", icon: "simple-icons:strapi" },
+      { name: "Git", icon: "simple-icons:git" },
+      { name: "Responsive QA", icon: "lucide:monitor-smartphone" },
+      { name: "Client Delivery", icon: "lucide:handshake" },
+    ],
+  },
+];
+
 export const projects = [
   {
     id: 1,

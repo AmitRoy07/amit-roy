@@ -9,6 +9,7 @@ const navLinks = [
   { section: "home", icon: "lucide:home" },
   { section: "services", icon: "lucide:wand-sparkles" },
   { section: "about", icon: "lucide:user-round" },
+  { section: "tech-stack", icon: "lucide:blocks" },
   { section: "work", icon: "lucide:briefcase-business" },
   { section: "client-websites", icon: "lucide:globe-2" },
   { section: "certifications", icon: "lucide:badge-check" },
