@@ -1,8 +1,8 @@
 {
   "name": "Amit Roy Portfolio",
   "short_name": "Amit Roy",
-  "description": "UI/UX Designer and Frontend Developer portfolio.",
-  "start_url": "/",
+  "description": "Amit Roy's UI/UX Designer and Frontend Developer portfolio featuring frontend projects, client websites, and tech stack.",
+  "start_url": "/awwwards-portfolio-main/",
   "display": "standalone",
   "background_color": "#e5e5e0",
   "theme_color": "#e5e5e0",

@@ -41,8 +41,8 @@ const TechStack = () => {
         icon="lucide:blocks"
         withScrollTrigger={true}
       />
-      <div className="grid grid-cols-1 gap-10 px-5 pb-20 font-light sm:px-10 xl:items-start">
-        <div className="tech-stack-group sticky top-24 flex md:min-h-[540px] items-center justify-center border-b-2 border-black/80 py-8">
+      <div className="grid grid-cols-1 gap-10 px-5 pb-10 font-light sm:px-10 xl:items-start">
+        <div className="tech-stack-group sticky top-24 flex md:min-h-[540px] items-center justify-center border-b-2 border-black/80 pb-8">
           <div className="relative grid aspect-square w-full md:max-w-[560px] place-items-center">
             <div className="absolute inset-8 rounded-full border border-black/20" />
             <IconCloud images={cloudImages} />
