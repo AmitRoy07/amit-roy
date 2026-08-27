@@ -263,6 +263,23 @@ export const projects = [
       { id: 4, name: "Conversion Flow" },
     ],
   },
+  {
+    id: 8,
+    name: "XGM",
+    icon: "lucide:chart-candlestick",
+    description:
+      "Responsive financial-markets website with a polished trading interface, account-focused journeys, platform content, and production frontend delivery.",
+    href: "https://xalpglobalmarkets.com/",
+    image: "/assets/projects/xgm.png",
+    bgImage: "/assets/projects/xgm.png",
+    frameworks: [
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Next.js" },
+      { id: 3, name: "Shopify" },
+      { id: 4, name: "Nginx" },
+      { id: 5, name: "AWS" },
+    ],
+  },
 ];
 
 export const clientWebsites = [
