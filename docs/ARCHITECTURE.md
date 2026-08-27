@@ -44,6 +44,8 @@ Reusable or semi-reusable building blocks.
 - `AnimatedHeaderSection.jsx`: animated section heading pattern.
 - `AnimatedSvgMark.jsx`: reusable animated SVG accent used with section headings.
 - `AnimatedTextLines.jsx`: line-based animated text.
+- `GridDotBackground.jsx`: reusable masked grid-and-dot backdrop with light and dark section variants.
+- `TechKeyboard.jsx`: interactive keyboard-style presentation of the technology stack with pooled mechanical-keyboard audio playback.
 - `Marquee.jsx`: infinite GSAP marquee with scroll-reactive speed.
 - `Planet.jsx`: generated GLB component and its local GSAP animation.
 - `ui/smooth-cursor.jsx`: Magic UI cursor component.

@@ -4,6 +4,7 @@ import { AnimatedTextLines } from "../components/AnimatedTextLines";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Icon } from "@iconify/react";
+import GridDotBackground from "../components/GridDotBackground";
 
 const aboutHighlights = [
   { label: "5.7+ years", icon: "lucide:badge-check" },
@@ -48,16 +49,18 @@ I enjoy collaborating with designers, developers, clients, and small teams to tu
   });
 
   return (
-    <section id="about" className="min-h-screen bg-black rounded-b-4xl">
-      <AnimatedHeaderSection
-        subTitle={"Pixel-perfect, accessible, production-ready"}
-        title={"About"}
-        text={text}
-        textColor={"text-white"}
-        icon="lucide:user-round-check"
-        withScrollTrigger={true}
-      />
-      <div className="flex flex-col items-center justify-between gap-16 px-5 pb-16 text-xl font-light tracking-wide sm:px-10 lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+    <section id="about" className="relative isolate min-h-screen overflow-hidden bg-black rounded-b-4xl">
+      <GridDotBackground theme="dark" />
+      <div className="relative z-10">
+        <AnimatedHeaderSection
+          subTitle={"Pixel-perfect, accessible, production-ready"}
+          title={"About"}
+          text={text}
+          textColor={"text-white"}
+          icon="lucide:user-round-check"
+          withScrollTrigger={true}
+        />
+        <div className="flex flex-col items-center justify-between gap-16 px-5 pb-16 text-xl font-light tracking-wide sm:px-10 lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
           src="/assets/images/Intro/profile.webp"
@@ -69,7 +72,7 @@ I enjoy collaborating with designers, developers, clients, and small teams to tu
             {aboutHighlights.map((item) => (
               <div
                 key={item.label}
-                className="flex items-center gap-3 border border-white/15 px-4 py-3 text-sm uppercase tracking-[0.18rem] text-white/75"
+                className="flex items-center gap-3 border border-white/20 bg-black/75 px-4 py-3 text-sm uppercase tracking-[0.18rem] text-white/90 backdrop-blur-[2px]"
               >
                 <Icon icon={item.icon} className="size-5 shrink-0 text-gold" />
                 {item.label}
@@ -77,6 +80,7 @@ I enjoy collaborating with designers, developers, clients, and small teams to tu
             ))}
           </div>
           <AnimatedTextLines text={aboutText} className={"w-full"} />
+        </div>
         </div>
       </div>
     </section>

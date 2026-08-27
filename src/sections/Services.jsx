@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Icon } from "@iconify/react";
+import GridDotBackground from "../components/GridDotBackground";
 
 const Services = () => {
   const text = `I turn designs into production-ready frontends
@@ -31,15 +32,18 @@ const Services = () => {
 
   return (
     <section id="services" className="min-h-screen bg-black rounded-t-4xl">
-      <div className="sticky top-0 z-20 bg-black rounded-t-4xl">
-        <AnimatedHeaderSection
-          subTitle={"Design precision, frontend discipline"}
-          title={"Services"}
-          text={text}
-          textColor={"text-white"}
-          icon="lucide:wand-sparkles"
-          withScrollTrigger={true}
-        />
+      <div className="sticky top-0 z-20 isolate overflow-hidden bg-black rounded-t-4xl">
+        <GridDotBackground theme="dark" />
+        <div className="relative z-10">
+          <AnimatedHeaderSection
+            subTitle={"Design precision, frontend discipline"}
+            title={"Services"}
+            text={text}
+            textColor={"text-white"}
+            icon="lucide:wand-sparkles"
+            withScrollTrigger={true}
+          />
+        </div>
       </div>
       {servicesData.map((service, index) => (
         <div

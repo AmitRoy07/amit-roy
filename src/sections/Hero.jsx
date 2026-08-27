@@ -3,6 +3,7 @@ import { Planet } from "../components/Planet";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+import GridDotBackground from "../components/GridDotBackground";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -16,8 +17,9 @@ that feel polished, fast, and production-ready`;
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end min-h-screen"
+      className="relative isolate flex min-h-screen flex-col justify-end overflow-hidden"
     >
+      <GridDotBackground className="z-0" />
       <div className="relative z-10">
         <AnimatedHeaderSection
           subTitle={"UI/UX Designer | Frontend Developer"}
@@ -38,7 +40,7 @@ that feel polished, fast, and production-ready`;
         </div>
       </div>
       <figure
-        className="absolute inset-x-0 -top-16 z-0 h-[42vh] pointer-events-none sm:-top-12 sm:h-[40vh] md:inset-0 md:h-auto"
+        className="absolute inset-x-0 -top-16 z-[1] h-[42vh] pointer-events-none sm:-top-12 sm:h-[40vh] md:inset-0 md:h-auto"
         style={{ width: "100vw" }}
       >
         <Canvas

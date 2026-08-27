@@ -4,6 +4,7 @@ import Marquee from "../components/Marquee";
 import { socials } from "../constants";
 import gsap from "gsap";
 import { Icon } from "@iconify/react";
+import GridDotBackground from "../components/GridDotBackground";
 
 const Contact = () => {
   const text = `Open to UI/UX design and frontend developer roles
@@ -33,9 +34,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-between min-h-screen bg-black"
+      className="relative isolate flex min-h-screen flex-col justify-between overflow-hidden bg-black"
     >
-      <div>
+      <GridDotBackground theme="dark" />
+      <div className="relative z-10">
         <AnimatedHeaderSection
           subTitle={"Kolkata | Immediate availability"}
           title={"Contact"}
@@ -114,7 +116,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Marquee items={items} className="text-white bg-transparent" />
+      <div className="relative z-10">
+        <Marquee items={items} className="text-white bg-transparent" />
+      </div>
     </section>
   );
 };

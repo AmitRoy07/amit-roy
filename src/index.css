@@ -3,7 +3,8 @@
 /* Amiamie Regular */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-Regular.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-Regular.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -13,7 +14,8 @@
 /* Amiamie Regular Italic */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-Italic.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-Italic.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -23,7 +25,8 @@
 /* Amiamie Light */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-Light.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-Light.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -33,7 +36,8 @@
 /* Amiamie Light Italic */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-LightItalic.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-LightItalic.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
@@ -43,7 +47,8 @@
 /* Amiamie Black */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-Black.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-Black.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
@@ -53,7 +58,8 @@
 /* Amiamie Black Italic */
 @font-face {
   font-family: "Amiamie";
-  src: url("/fonts/amiamie/otf/Amiamie-BlackItalic.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-BlackItalic.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
@@ -63,7 +69,8 @@
 /* Amiamie-Round Variants (if needed separately) */
 @font-face {
   font-family: "Amiamie-Round";
-  src: url("/fonts/amiamie/otf/Amiamie-RegularRound.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-RegularRound.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-RegularRound.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -72,7 +79,8 @@
 
 @font-face {
   font-family: "Amiamie-Round";
-  src: url("/fonts/amiamie/otf/Amiamie-BlackRound.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-BlackRound.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-BlackRound.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
@@ -81,7 +89,8 @@
 
 @font-face {
   font-family: "Amiamie-Round";
-  src: url("/fonts/amiamie/otf/Amiamie-BlackItalicRound.otf") format("opentype"),
+  src:
+    url("/fonts/amiamie/otf/Amiamie-BlackItalicRound.otf") format("opentype"),
     url("/fonts/amiamie/ttf/Amiamie-BlackItalicRound.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
@@ -191,6 +200,501 @@ body {
 .loader-greeting[data-lang="bn"] {
   font-family: "Nirmala UI", "Noto Sans Bengali", "Vrinda", sans-serif;
   font-weight: 300;
+}
+
+/* Hero grid and dot background */
+.grid-dot-background {
+  --grid-accent: 207, 163, 85;
+  --grid-line: 57, 54, 50;
+  --grid-fade: #e5e5e0;
+}
+
+.grid-dot-background--dark {
+  --grid-line: 255, 255, 255;
+  --grid-fade: #000000;
+  opacity: 0.42;
+}
+
+.grid-dot-background__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(var(--grid-line), 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--grid-line), 0.12) 1px, transparent 1px),
+    radial-gradient(
+      circle,
+      rgba(var(--grid-accent), 0.72) 1.25px,
+      transparent 1.5px
+    );
+  background-position: center top;
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 58% at 50% 24%,
+    black 5%,
+    transparent 76%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 58% at 50% 24%,
+    black 5%,
+    transparent 76%
+  );
+}
+
+.grid-dot-background__fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 42%,
+    var(--grid-fade) 82%
+  );
+}
+
+@media (max-width: 640px) {
+  .grid-dot-background__grid {
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 100% 48% at 50% 18%,
+      black 8%,
+      transparent 78%
+    );
+    mask-image: radial-gradient(
+      ellipse 100% 48% at 50% 18%,
+      black 8%,
+      transparent 78%
+    );
+  }
+}
+
+/* Interactive tech-stack keyboard */
+.tech-keyboard-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0 2rem;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: rgba(207, 163, 85, 0.75) rgba(0, 0, 0, 0.08);
+  scrollbar-width: thin;
+}
+
+.tech-keyboard {
+  width: max(800px, 100%);
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: clamp(0.7rem, 1.8vw, 1.35rem);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: clamp(1rem, 2.2vw, 1.75rem);
+  background: linear-gradient(145deg, #d4d4d0, #f1f1ed 52%, #c9c9c5);
+  box-shadow:
+    0 0.6rem 1rem rgba(57, 54, 50, 0.17),
+    0 0.3rem 0 rgba(57, 54, 50, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  perspective: 1000px;
+}
+
+.tech-keyboard__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.25rem;
+  padding: 0.3rem 0.35rem 0.85rem 0.6rem;
+}
+
+.tech-keyboard__eyebrow {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(0, 0, 0, 0.42);
+}
+
+.tech-keyboard__status {
+  margin-top: 0.25rem;
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.tech-keyboard__sound {
+  display: flex;
+  min-width: 6.5rem;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-inline: 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0.8rem;
+  background: linear-gradient(#efefec, #d8d8d4);
+  color: rgba(57, 54, 50, 0.65);
+  box-shadow:
+    inset 0 1px 1px white,
+    0 2px 3px rgba(0, 0, 0, 0.16);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 100ms ease;
+}
+
+.tech-keyboard__sound:hover,
+.tech-keyboard__sound--on {
+  border-color: rgba(207, 163, 85, 0.75);
+  color: #393632;
+}
+
+.tech-keyboard__sound:active {
+  transform: translateY(2px);
+}
+
+.tech-keyboard__sound:focus-visible {
+  outline: 3px solid #cfa355;
+  outline-offset: 2px;
+}
+
+.tech-keyboard__sound svg {
+  width: 1rem;
+  height: 1rem;
+  color: #cfa355;
+}
+
+.tech-keyboard__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.tech-keyboard__row,
+.tech-keyboard__footer {
+  display: flex;
+  gap: 0.42rem;
+}
+
+.tech-key {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 6.25rem;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  overflow: hidden;
+  border: 1px solid rgba(57, 54, 50, 0.3);
+  border-radius: 0.65rem;
+  background: linear-gradient(150deg, #fafafa, #eeeeec);
+  color: #393632;
+  box-shadow:
+    0 3px 0 rgba(57, 54, 50, 0.22),
+    0 5px 8px rgba(57, 54, 50, 0.12),
+    inset 0 1px 1px white;
+}
+
+button.tech-key {
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    box-shadow 100ms ease,
+    transform 100ms ease;
+}
+
+button.tech-key:hover,
+.tech-key--active {
+  border-color: rgba(207, 163, 85, 0.85);
+  background: linear-gradient(150deg, #fff7e8, #ead4aa);
+  color: #000;
+}
+
+button.tech-key:active,
+.tech-key--active {
+  transform: translateY(2px);
+  box-shadow:
+    0 1px 0 rgba(57, 54, 50, 0.24),
+    0 2px 4px rgba(57, 54, 50, 0.12),
+    inset 0 1px 2px rgba(57, 54, 50, 0.08);
+}
+
+button.tech-key:focus-visible {
+  outline: 3px solid #cfa355;
+  outline-offset: 2px;
+}
+
+.tech-key__icon {
+  width: clamp(1.7rem, 2.7vw, 2.4rem);
+  height: clamp(1.7rem, 2.7vw, 2.4rem);
+  color: #cfa355;
+}
+
+.tech-key__label {
+  max-width: 100%;
+  padding-inline: 0.2rem;
+  overflow: hidden;
+  font-size: clamp(0.56rem, 0.85vw, 0.76rem);
+  line-height: 1.1;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tech-key--modifier {
+  min-width: 8.75rem;
+  flex: 0 0 8.75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.75rem;
+  text-transform: uppercase;
+}
+
+.tech-key--modifier span,
+.tech-key--return span {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: rgba(57, 54, 50, 0.5);
+}
+
+.tech-key--modifier strong {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.tech-key__modifier-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #cfa355;
+}
+
+.tech-key--return {
+  max-width: 5.75rem;
+  flex: 0 0 5.75rem;
+  align-items: flex-end;
+  padding: 0.75rem;
+}
+
+.tech-key--return svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tech-keyboard__footer {
+  margin-top: 0.42rem;
+}
+
+.tech-key--utility {
+  min-height: 4rem;
+  max-width: 5rem;
+  padding: 0.6rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+}
+
+.tech-key--utility svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.tech-key--space {
+  min-height: 4rem;
+  flex: 1 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 1.2rem;
+  text-transform: uppercase;
+}
+
+.tech-key--space span {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  color: rgba(57, 54, 50, 0.42);
+}
+
+.tech-key--space strong {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+
+.tech-key--arrows {
+  min-height: 4rem;
+  max-width: 8.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  flex: 0 0 8.75rem;
+  gap: 0.2rem;
+  padding: 0.22rem;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.tech-arrow-key {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  border: 1px solid rgba(57, 54, 50, 0.28);
+  background: linear-gradient(150deg, #fafafa, #e9e9e6);
+  box-shadow:
+    0 2px 0 rgba(57, 54, 50, 0.2),
+    inset 0 1px 1px white;
+}
+
+.tech-arrow-key--up {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 0.45rem 0.45rem 0.25rem 0.25rem;
+}
+
+.tech-arrow-key--left {
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 0.45rem 0.25rem 0.25rem 0.45rem;
+}
+
+.tech-arrow-key--down {
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 0.25rem;
+}
+
+.tech-arrow-key--right {
+  grid-column: 3;
+  grid-row: 2;
+  border-radius: 0.25rem 0.45rem 0.45rem 0.25rem;
+}
+
+.tech-arrow-key svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .tech-keyboard-scroll {
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
+  }
+
+  .tech-keyboard {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tech-keyboard__row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tech-key {
+    min-width: 0;
+  }
+
+  .tech-key--modifier {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    grid-column: span 2;
+  }
+
+  .tech-key--return {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    grid-column: span 2;
+  }
+
+  .tech-keyboard__footer {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+
+  .tech-key--utility {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .tech-key--space {
+    grid-column: span 3;
+  }
+
+  .tech-key--arrows {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-keyboard {
+    width: 100%;
+    padding: 0.65rem;
+    border-radius: 1rem;
+  }
+
+  .tech-keyboard__topbar {
+    min-height: 3.5rem;
+  }
+
+  .tech-keyboard__row,
+  .tech-keyboard__footer,
+  .tech-keyboard__rows {
+    gap: 0.3rem;
+  }
+
+  .tech-keyboard__row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tech-keyboard__footer {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .tech-key {
+    min-height: 4.75rem;
+  }
+
+  .tech-key--modifier {
+    min-width: 0;
+  }
+
+  .tech-key--return {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .tech-key--utility,
+  .tech-key--space,
+  .tech-key--arrows {
+    min-height: 3.6rem;
+  }
+
+  .tech-key--arrows {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .tech-key--space {
+    padding-inline: 0.65rem;
+  }
+
+  .tech-key--space span {
+    display: none;
+  }
+
+  .tech-key--space strong {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @keyframes loader-scan {

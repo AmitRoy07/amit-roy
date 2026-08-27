@@ -308,6 +308,12 @@ export const clientWebsites = [
     href: "https://www.xyraxdr.com",
     category: "Cybersecurity Website",
   },
+  {
+    id: 8,
+    name: "KHM Communications",
+    href: "https://khmcommunications.com/",
+    category: "Communications Website",
+  },
 ];
 
 export const certifications = [

@@ -4,6 +4,7 @@ import { projects } from "../constants";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import GridDotBackground from "../components/GridDotBackground";
 
 const Works = () => {
   const overlayRefs = useRef([]);
@@ -100,7 +101,9 @@ const Works = () => {
   };
 
   return (
-    <section id="work" className="flex flex-col min-h-screen pb-16">
+    <section id="work" className="relative isolate flex min-h-screen flex-col overflow-hidden pb-16">
+      <GridDotBackground />
+      <div className="relative z-10">
         <AnimatedHeaderSection
         subTitle={"Products, platforms, and client delivery"}
         title={"Works"}
@@ -181,6 +184,7 @@ const Works = () => {
               className="object-cover w-full h-full"
             />
           )}
+        </div>
         </div>
       </div>
     </section>

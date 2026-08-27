@@ -82,6 +82,8 @@ Current files:
 - `AnimatedHeaderSection.jsx`
 - `AnimatedSvgMark.jsx`
 - `AnimatedTextLines.jsx`
+- `GridDotBackground.jsx`
+- `TechKeyboard.jsx`
 - `Marquee.jsx`
 - `Planet.jsx`
 
