@@ -29,7 +29,7 @@ const Works = () => {
       ease: "power3.out",
     });
 
-    gsap.from("#project", {
+    gsap.from(".project", {
       y: 100,
       opacity: 0,
       delay: 0.5,
@@ -37,7 +37,7 @@ const Works = () => {
       stagger: 0.3,
       ease: "back.out",
       scrollTrigger: {
-        trigger: "#project",
+        trigger: ".project",
       },
     });
   }, []);
@@ -122,8 +122,7 @@ const Works = () => {
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            id="project"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
+            className="project relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             aria-label={`View ${project.name} project`}
@@ -162,12 +161,17 @@ const Works = () => {
             <div className="relative flex items-center justify-center px-5 sm:px-10 md:hidden h-[400px]">
               <img
                 src={project.bgImage}
-                alt={`${project.name} background`}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
                 className="object-cover w-full h-full rounded-md brightness-50"
               />
               <img
                 src={project.image}
-                alt={`${project.name} preview`}
+                alt={`Screenshot of the ${project.name} project`}
+                loading="lazy"
+                decoding="async"
                 className="absolute bg-center px-14 rounded-xl"
               />
             </div>
@@ -180,7 +184,8 @@ const Works = () => {
           {currentIndex !== null && (
             <img
               src={projects[currentIndex].image}
-              alt={`${projects[currentIndex].name} preview`}
+              alt=""
+              aria-hidden="true"
               className="object-cover w-full h-full"
             />
           )}

@@ -385,7 +385,7 @@ export const socials = [
   {
     name: "LinkedIn",
     icon: "lucide:linkedin",
-    href: "https://www.linkedin.com/in/amit-roy-92585a1a9?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    href: "https://www.linkedin.com/in/amit-roy-92585a1a9/",
   },
   {
     name: "GitHub",

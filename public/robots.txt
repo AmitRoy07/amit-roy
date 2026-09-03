@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amitroy07.github.io/awwwards-portfolio-main/sitemap.xml
+Sitemap: https://amit-roy.vercel.app/sitemap.xml

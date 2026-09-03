@@ -177,173 +177,20 @@ const App = () => {
         } transition-opacity duration-1000`}
       >
         <Navbar />
-        <Hero />
-        <ServiceSummary />
-        <Services />
-        <About />
-        <TechStack />
-        <Works />
-        <ClientWebsites />
-        <Certifications />
-        <Awards />
-        <ContactSummary />
-        <Contact />
+        <main id="main-content">
+          <Hero />
+          <ServiceSummary />
+          <Services />
+          <About />
+          <TechStack />
+          <Works />
+          <ClientWebsites />
+          <Certifications />
+          <Awards />
+          <ContactSummary />
+          <Contact />
+        </main>
       </div>
-              <pre style={{display: 'none'}}>Create a reusable SCSS utility file using the following exact requirements:
-
-1. Import the Sass Math module using:
-
-```scss
-@use "sass:math";
-```
-
-2. Create a `toRem($value)` function that:
-
-   * Converts pixel values to `rem`.
-   * Uses a `16px` root font size.
-   * Returns values with non-pixel units unchanged.
-   * Uses `math.unit()` to detect the unit.
-
-3. Create a `scaleValue()` function with this exact signature:
-
-```scss
-@function scaleValue($min, $max, $type: px, $maxViewport: 1240px)
-```
-
-The function must:
-
-* Use `320px` as the minimum viewport width.
-* Calculate the viewport range.
-* Calculate the difference between the minimum and maximum content sizes.
-* Return a CSS `clamp()` value.
-* Convert values to `rem` when `$type` is `rem`.
-* Keep values in pixels when `$type` is `px`.
-* Use `calc()` for the responsive fluid value.
-* Use the existing `toRem()` function for rem conversion.
-
-4. Create the following mixins:
-
-```scss
-@mixin displayFlex($dir, $align, $justify)
-```
-
-It must apply:
-
-```scss
-display: flex;
-flex-direction: $dir;
-align-items: $align;
-justify-content: $justify;
-```
-
-Create:
-
-```scss
-@mixin textGradient($clr)
-```
-
-It must apply a background value, text background clipping, and transparent text fill.
-
-Create:
-
-```scss
-@mixin textBorderGradient($clr, $stroke: toRem(8px))
-```
-
-It must apply the gradient as the text background and use a transparent WebKit text stroke.
-
-Create responsive media-query mixins:
-
-```scss
-@mixin min($minWidth)
-@mixin max($maxWidth)
-```
-
-Both mixins must support `@content`.
-
-5. Follow these output rules strictly:
-
-* Output only the final SCSS code.
-* Do not add explanations.
-* Do not rename any function, mixin, parameter, or variable.
-* Do not add extra utilities.
-* Preserve camelCase naming.
-* Keep clear comments above each utility section.
-* Use readable indentation and formatting.
-* Ensure the code is compatible with modern Dart Sass.
-
-The final result must follow this exact structure:
-
-```scss
-@use "sass:math";
-
-// Convert a value to rem
-@function toRem($value) &#123;
-  // Convert pixel value to rem based on a 16px root font size
-  @if math.unit($value) == px &#123;
-    @return calc(1rem / 16px * $value);
-  &#125; @else &#123;
-    // If value is already in rem or other units, return as-is
-    @return $value;
-  &#125;
-&#125;
-
-// Scale Size According to Width
-@function scaleValue($min, $max, $type: px, $maxViewport: 1240px) &#123;
-  $minViewport: 320px;
-
-  // Calculate viewport range
-  $viewportRange: $maxViewport - $minViewport;
-
-  // Calculate content size range (difference between max and min)
-  $contentSizeRange: $max - $min;
-
-  // If the type is rem, convert min/max to rem and calculate accordingly
-  @if $type == rem &#123;
-    $idealSize: calc(
-      toRem($min) + (100vw * $contentSizeRange / $viewportRange)
-    );
-    @return clamp(toRem($min), $idealSize, toRem($max));
-  &#125; @else &#123;
-    // If the type is px, calculate directly without rem conversion
-    $idealSize: calc($min + (100vw * $contentSizeRange / $viewportRange));
-    @return clamp($min, $idealSize, $max);
-  &#125;
-&#125;
-
-// Flexbox
-@mixin displayFlex($dir, $align, $justify) &#123;
-  display: flex;
-  flex-direction: $dir;
-  align-items: $align;
-  justify-content: $justify;
-&#125;
-
-@mixin textGradient($clr) &#123;
-  background: $clr;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-&#125;
-
-@mixin textBorderGradient($clr, $stroke: toRem(8px)) &#123;
-  background: $clr;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: toRem($stroke) transparent;
-&#125;
-
-@mixin min($minWidth) &#123;
-  @media (min-width: $minWidth) &#123;
-    @content;
-  &#125;
-&#125;
-
-@mixin max($maxWidth) &#123;
-  @media (max-width: $maxWidth) &#123;
-    @content;
-  &#125;
-&#125;
-```
-</pre>
     </ReactLenis>
   );
 };

@@ -64,7 +64,9 @@ I enjoy collaborating with designers, developers, clients, and small teams to tu
         <img
           ref={imgRef}
           src="/assets/images/Intro/profile.webp"
-          alt="Amit Roy"
+          alt="Amit Roy, UI/UX designer and frontend developer in Kolkata"
+          loading="lazy"
+          decoding="async"
           className="object-cover w-md h-[600px] rounded-3xl"
         />
         <div className="flex w-full flex-col gap-8">

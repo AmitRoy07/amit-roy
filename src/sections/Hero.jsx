@@ -40,10 +40,12 @@ that feel polished, fast, and production-ready`;
         </div>
       </div>
       <figure
+        aria-hidden="true"
         className="absolute inset-x-0 -top-16 z-[1] h-[42vh] pointer-events-none sm:-top-12 sm:h-[40vh] md:inset-0 md:h-auto"
         style={{ width: "100vw" }}
       >
         <Canvas
+          aria-hidden="true"
           shadows
           camera={{ position: cameraPosition, fov: 19, near: 1, far: 24 }}
         >
