@@ -16,6 +16,7 @@ import { useProgress } from "@react-three/drei";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ViewCounter from "./components/ViewCounter";
 
 const greetings = [
   { word: "नमस्ते", language: "Hindi", lang: "hi" },
@@ -94,7 +95,7 @@ const App = () => {
               duration: 0.28,
               stagger: 0.04,
               ease: "power3.out",
-            }
+            },
           )
           .to([greetingEl, languageEl], {
             yPercent: -110,
@@ -108,7 +109,7 @@ const App = () => {
 
       return () => tl.kill();
     },
-    { dependencies: [isReady], revertOnUpdate: true, scope: loaderRef }
+    { dependencies: [isReady], revertOnUpdate: true, scope: loaderRef },
   );
 
   return (
@@ -123,7 +124,8 @@ const App = () => {
             <p>Amit Roy</p>
             <p className="hidden text-right sm:block">
               Say hello
-              <br />in 20 languages
+              <br />
+              in 20 languages
             </p>
           </div>
 
@@ -180,6 +182,7 @@ const App = () => {
         <main id="main-content">
           <Hero />
           <ServiceSummary />
+          <ViewCounter />
           <Services />
           <About />
           <TechStack />
