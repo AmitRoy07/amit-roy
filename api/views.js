@@ -1,6 +1,22 @@
 import { Redis } from "@upstash/redis";
 
-const redis = Redis.fromEnv();
+function getRedisClient() {
+  const environment = globalThis.process?.env;
+  const url = environment?.UPSTASH_REDIS_REST_URL?.replace(
+    /^["']|["']$/g,
+    ""
+  );
+  const token = environment?.UPSTASH_REDIS_REST_TOKEN?.replace(
+    /^["']|["']$/g,
+    ""
+  );
+
+  if (!url || !token) {
+    throw new Error("Upstash Redis environment variables are not configured");
+  }
+
+  return new Redis({ url, token });
+}
 
 export default async function handler(request, response) {
   if (request.method !== "GET") {
@@ -9,7 +25,7 @@ export default async function handler(request, response) {
   }
 
   try {
-    const views = await redis.incr("website:total-views");
+    const views = await getRedisClient().incr("website:total-views");
 
     response.setHeader("Cache-Control", "no-store");
     return response.status(200).json({ views });
