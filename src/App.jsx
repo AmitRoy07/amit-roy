@@ -12,6 +12,7 @@ import Certifications from "./sections/Certifications";
 import Awards from "./sections/Awards";
 import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
+import Faq from "./sections/Faq";
 import { useProgress } from "@react-three/drei";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
 import { useGSAP } from "@gsap/react";
@@ -191,6 +192,7 @@ const App = () => {
           <Certifications />
           <Awards />
           <ContactSummary />
+          <Faq />
           <Contact />
         </main>
       </div>

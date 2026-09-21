@@ -1,0 +1,26 @@
+# Amit Roy
+
+> Amit Roy is a Kolkata-based UI/UX Designer and Frontend Developer with 5.8+ years of experience building scalable, responsive web interfaces.
+
+## Services
+
+- UI/UX design and Figma-to-frontend implementation
+- Frontend development with React, Next.js, Angular, and Svelte
+- Responsive UI, component architecture, motion, and interaction design
+- CMS and storefront delivery with WordPress, Shopify, and Strapi
+
+## Technology
+
+React, Next.js, Angular, Svelte, JavaScript, TypeScript, C#, Tailwind CSS, GSAP, Three.js, Figma, WordPress, Shopify, and Strapi.
+
+## Location and contact
+
+- Location: Kolkata, West Bengal, India
+- Email: amitroy2383@gmail.com
+- Portfolio: https://amit-roy.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/amit-roy-92585a1a9/
+- GitHub: https://github.com/AmitRoy07
+
+## Selected work
+
+ClassPoint, GobyHomes, QuantumSoar, RainDrop Media Consultancy, ONUFitness, Noir Automotive, Air Country Home, and XGM.

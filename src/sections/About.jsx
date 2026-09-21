@@ -7,17 +7,17 @@ import { Icon } from "@iconify/react";
 import GridDotBackground from "../components/GridDotBackground";
 
 const aboutHighlights = [
-  { label: "5.7+ years", icon: "lucide:badge-check" },
+  { label: "5.8+ years", icon: "lucide:badge-check" },
   { label: "Team lead", icon: "lucide:users-round" },
   { label: "Motion UI", icon: "lucide:sparkles" },
   { label: "Scalable frontend", icon: "lucide:blocks" },
 ];
 
 const About = () => {
-  const text = `5.7+ years of building modern web applications
+  const text = `5.8+ years of building modern web applications
     across UI/UX design, frontend architecture,
     responsive systems, animation, and client delivery`;
-  const aboutText = `I am a UI/UX Designer and Frontend Developer based in Kolkata, currently working as a lead at SentientGeeks. I build scalable web interfaces with React, Next.js, Angular, Svelte, JavaScript, TypeScript, Tailwind CSS, SCSS, Bootstrap, PrimeNG, Material UI, and modern design systems.
+  const aboutText = `I am a UI/UX Designer and Frontend Developer based in Kolkata, currently working as a lead at SentientGeeks. I build scalable web interfaces with React, Next.js, Angular, Svelte, JavaScript, TypeScript, C#, Tailwind CSS, SCSS, Bootstrap, PrimeNG, Material UI, and modern design systems.
 
 My work spans Figma-to-frontend implementation, reusable component architecture, responsive UI development, frontend performance optimization, cross-browser compatibility, animation with Framer Motion, GSAP, Three.js and Lenis, CMS platforms including WordPress, Shopify and Strapi, and hands-on client communication.
 

@@ -107,6 +107,7 @@ export const techStackCategories = [
       { name: "Svelte", icon: "simple-icons:svelte" },
       { name: "JavaScript", icon: "simple-icons:javascript" },
       { name: "TypeScript", icon: "simple-icons:typescript" },
+      { name: "C#", icon: "simple-icons:csharp" },
     ],
   },
   {

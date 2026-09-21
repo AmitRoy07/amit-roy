@@ -14,6 +14,7 @@ const navLinks = [
   { section: "client-websites", icon: "lucide:globe-2" },
   { section: "certifications", icon: "lucide:badge-check" },
   { section: "awards", icon: "lucide:trophy" },
+  { section: "faq", icon: "lucide:circle-help" },
   { section: "contact", icon: "lucide:send" },
 ];
 
