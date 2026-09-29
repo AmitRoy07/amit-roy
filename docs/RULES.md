@@ -11,6 +11,16 @@ Before adding or changing code:
 - Update `README.md`, `docs/ARCHITECTURE.md`, or `docs/FOLDER_STRUCTURE.md` when structure, ownership, dependencies, or platform direction changes.
 - Keep changes scoped. Do not refactor unrelated files while adding a feature.
 
+## Library Discovery Before Implementation
+
+Before implementing a new UI behavior, animation, interaction, or integration:
+
+- Inspect `package.json` and search the codebase for existing use of relevant libraries and components.
+- Prefer the installed library that already matches the project pattern instead of adding a new dependency or duplicating functionality.
+- For animation work, check the established GSAP, `@gsap/react`, Lenis, Framer Motion, and CSS animation patterns before choosing an approach.
+- State which existing library/pattern is being reused when the implementation choice is material.
+- Add a dependency only after confirming the existing stack cannot reasonably support the requirement.
+
 ## Current Project Rules
 
 - This is currently a Vite React web app using `.jsx`.
