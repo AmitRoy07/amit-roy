@@ -62,7 +62,7 @@ const Services = () => {
           <div className="flex items-center justify-between gap-4 font-light">
             <div className="flex flex-col gap-6">
               <h2 className="flex items-center gap-4 text-4xl lg:text-5xl">
-                <span className="grid rounded-full size-14 place-items-center bg-white/10 text-gold">
+                <span className="grid rounded-full size-14 place-items-center bg-white/10 text-gold flex-shrink-0">
                   <Icon icon={service.icon} className="size-7" />
                 </span>
                 {service.title}
