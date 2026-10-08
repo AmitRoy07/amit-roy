@@ -14,6 +14,7 @@ const AnimatedHeaderSection = ({
   icon = "lucide:sparkles",
   headingLevel = "h2",
   withScrollTrigger = false,
+  descriptionRef,
 }) => {
   const contextRef = useRef(null);
   const headerRef = useRef(null);
@@ -79,7 +80,7 @@ const AnimatedHeaderSection = ({
           </div>
         </div>
       </div>
-      <div className={`relative px-5 sm:px-10 ${textColor}`}>
+      <div ref={descriptionRef} className={`relative px-5 sm:px-10 ${textColor}`}>
         <div className="absolute inset-x-0 border-t-2" />
         <div className="py-12 text-end">
           <AnimatedTextLines

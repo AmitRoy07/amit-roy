@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="192" viewBox="0 0 768 192">
+  <rect width="768" height="192" fill="#111111"/>
+  <path d="M0 14H768M0 178H768" stroke="#494949" stroke-width="2" stroke-dasharray="8 8"/>
+  <g transform="translate(384 96)" fill="none" stroke="#f4f1ea" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path id="loop" d="M0-12C-22-39-7-62 14-49C30-39 26-16 8-5"/>
+    <use href="#loop" transform="rotate(60)"/>
+    <use href="#loop" transform="rotate(120)"/>
+    <use href="#loop" transform="rotate(180)"/>
+    <use href="#loop" transform="rotate(240)"/>
+    <use href="#loop" transform="rotate(300)"/>
+  </g>
+</svg>
