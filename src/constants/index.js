@@ -151,6 +151,23 @@ export const techStackCategories = [
 
 export const projects = [
   {
+    id: 9,
+    name: "CodeQuest",
+    icon: "lucide:code-xml",
+    description:
+      "A personal coding-learning platform built with AI assistance, featuring 300 JavaScript, React, and C# exercises, a Monaco editor with saved workspaces, sandboxed JavaScript assessments, React live previews, and progress tracking. Built with Next.js, TypeScript, and Prisma, and deployed on Vercel.",
+    href: "https://code-quest-five-wheat.vercel.app",
+    image: "/assets/projects/codequest.png",
+    bgImage: "/assets/projects/codequest.png",
+    frameworks: [
+      { id: 1, name: "Next.js" },
+      { id: 2, name: "TypeScript" },
+      { id: 3, name: "Tailwind CSS" },
+      { id: 4, name: "Prisma" },
+      { id: 5, name: "AI-assisted Development" },
+    ],
+  },
+  {
     id: 1,
     name: "ClassPoint",
     icon: "lucide:presentation",

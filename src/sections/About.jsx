@@ -22,6 +22,8 @@ const About = () => {
 
 My work spans Figma-to-frontend implementation, reusable component architecture, responsive UI development, frontend performance optimization, cross-browser compatibility, animation with Framer Motion, GSAP, Three.js and Lenis, CMS platforms including WordPress, Shopify and Strapi, and hands-on client communication.
 
+I also explore AI-assisted product development through personal projects like CodeQuest, a coding-learning platform with interactive workspaces, JavaScript assessments, React previews, and saved learning progress.
+
 I enjoy collaborating with designers, developers, clients, and small teams to turn product ideas into clean, reliable, production-ready web experiences.`;
   const imgRef = useRef(null);
   const descriptionRef = useRef(null);
