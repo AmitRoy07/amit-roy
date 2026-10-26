@@ -47,13 +47,15 @@ that feel polished, fast, and production-ready`;
         <Canvas
           aria-hidden="true"
           shadows
+          dpr={[1, 1.5]}
+          gl={{ powerPreference: "high-performance" }}
           camera={{ position: cameraPosition, fov: 19, near: 1, far: 24 }}
         >
           <ambientLight intensity={0.5} />
           <Float speed={0.5}>
             <Planet scale={planetScale} />
           </Float>
-          <Environment resolution={256}>
+          <Environment resolution={128}>
             <group rotation={[-Math.PI / 3, 4, 1]}>
               <Lightformer
                 form={"circle"}
